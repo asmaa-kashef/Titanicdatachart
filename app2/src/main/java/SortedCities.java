@@ -23,16 +23,17 @@ public class SortedCities {
     CitiesOpenCV open=new CitiesOpenCV();
     public  LinkedList<CitiesPojo> Filter(String fileName ,String country){
         LinkedList<CitiesPojo> cities= open.opencsv(fileName);
+        LinkedList<CitiesPojo> matchedcities= new LinkedList<>();
         for(CitiesPojo i:cities){
             if((i.getCountry().trim()).equals(country)){
-                cities.add(i);
+               matchedcities.add(i);
 
             }
 
-            // List<CitiesPojo> CitiesName = cities.stream().filter(b -> b.getcountry_name()== Country).collect(toList());
+           //  List<CitiesPojo> CitiesName = cities.stream().filter(b -> b.getCountry().trim()== Country).collect(toList());
 
         }
-        return cities;
+        return matchedcities;
 
     }
     // put filtered city in hash map 
