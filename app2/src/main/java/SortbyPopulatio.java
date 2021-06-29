@@ -12,6 +12,7 @@ import java.util.*;
 public class SortbyPopulatio implements Comparator<CitiesPojo>{
     public int compare(CitiesPojo a, CitiesPojo b)
     {
-        return b.getPopulationInCity()-a.getPopulationInCity();
+      
+        return a.getPopulationInCity()-b.getPopulationInCity();
     }
 }
