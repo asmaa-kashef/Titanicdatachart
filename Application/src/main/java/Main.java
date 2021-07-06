@@ -1,5 +1,6 @@
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -18,21 +19,21 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    SortCities SC=new SortCities();
-       List<CitiesPojo>FilteredCites =SC.Filter("C:\\Users\\asmaa\\OneDrive\\Desktop\\iti\\java\\Day4\\dataset\\Cities.csv","PSE");
-      System.out.println(FilteredCites);
-       
         
-       
-           
-          
-   
-       // List<CitiesPojo> CitiesName = cities.stream().filter(b -> b.getcountry_name()== Country).collect(toList());
-     
-      }
-    
-       
+        String File_Name="C:\\Users\\asmaa\\OneDrive\\Desktop\\iti\\java\\Day4\\dataset\\Cities.csv";
+        SortedCities sc= new SortedCities();
+        SortedCitesStream St=new SortedCitesStream();
+        List<CitiesPojo>Cities_matched= St.Filter(File_Name,"EGY");
+         LinkedList<CitiesPojo>Cities_filtered=sc.Filter(File_Name, "EGY");
+         System.out.println(Cities_filtered);
+         System.out.println(Cities_matched);
+//         HashMap<String, LinkedList<CitiesPojo>>CitiesMap= sc.createdMap(Cities_filtered);
+//         System.out.println(CitiesMap);
+//          LinkedList<CitiesPojo> sortedCity=sc.sortedCity(CitiesMap);
+//          System.out.println(sortedCity);
+        
+        
         // TODO code application logic here
     }
     
-
+}
