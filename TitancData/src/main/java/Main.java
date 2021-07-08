@@ -25,14 +25,21 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         String datapath="C:\\Users\\asmaa\\OneDrive\\Desktop\\iti\\java\\Day5\\Day5\\Data_to_use\\titanic.csv";
+        //"C:\\Users\\asmaa\\OneDrive\\Desktop\\iti\\java\\Day5\\Day5\\Data_to_use\\titanic.csv"
+           String datapath="C:\\Users\\asmaa\\Downloads\\archive\\pyramids.csv";
          List<Column<?>>datastrucuture=new ArrayList(); 
          TitancData LD=new TitancData();
          LD.TitanicSummary(datapath);
          datastrucuture=LD.readFromCsv(datapath);
          System.out.println(datastrucuture );
            System.out.println(LD.TitanicSummary(datapath) );
-
+      
+           FromCsvtoJSON JS=new FromCsvtoJSON ();
+           List<Titanicpojo> pessangers= JS.getPassengersFromJsonFile("C:\\Users\\asmaa\\OneDrive\\Desktop\\iti\\java\\Day5\\Day5\\Data_to_use\\titanicjson.json");
+           System.out.println(pessangers);
+      
+           
+           
        
         
         
