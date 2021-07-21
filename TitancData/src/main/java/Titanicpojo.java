@@ -10,30 +10,30 @@
  */
 public class Titanicpojo {
     
-    private int pclass;
-    private int survived;
+    private String pclass;
+    private String survived;
     private String name;
     private String sex;
-    private int age;
-    private int sibsp;
-    private int parch;
-    private int ticket;
-    private int fare;
+    private float age;
+    private String  sibsp;
+    private String  parch;
+    private String  ticket;
+    private Float fare;
     private String cabin;
     private String embarked;
-    private int boat;
+    private String  boat;
     private String home_dest;
     
-    public int getpclass(){
+    public String  getpclass(){
         return  pclass;
     }
-    public void setpclass(int Pclass){
+    public void setpclass(String  Pclass){
         this.pclass=Pclass;
     }
-    public int getsurvived(){
+    public String  getsurvived(){
         return survived;
     }
-    public void setsurvived(int Survived){
+    public void setsurvived(String  Survived){
         this.survived=Survived;
     }
     public String getname(){
@@ -51,41 +51,41 @@ public class Titanicpojo {
         this.sex = Sex;
     }
 
-    public int getage() {
+    public float getage() {
         return age;
     }
 
-    public void setage(int Age) {
+    public void setage(float Age) {
         this.age = Age;
     }
 
-    public int getsibsp() {
+    public String getsibsp() {
         return sibsp;
     }
 
-    public void setsibsp(int Sibsp) {
+    public void setsibsp(String Sibsp) {
         this.sibsp = Sibsp;
     }
 
-    public int getparch() {
+    public String getparch() {
         return parch;
     }
 
-    public void setparch(int Parch) {
+    public void setparch(String Parch) {
         this.parch = Parch;
     }
-        public int getticket() {
+        public String getticket() {
         return ticket;
     }
 
-    public void setticket(int Ticket) {
+    public void setticket(String Ticket) {
         this.ticket= Ticket;
     }
-        public int getfare() {
+        public float getfare() {
         return fare;
     }
 
-    public void setfare(int Fare) {
+    public void setfare(float Fare) {
         this.fare= Fare;
     }
     public String getcabin() {
@@ -101,10 +101,10 @@ public class Titanicpojo {
     public void setembarked(String Embarked) {
         this. embarked =  Embarked;
     }
-    public int getboat() {
+    public String getboat() {
         return boat;
     }
-    public void setboat(int Boat) {
+    public void setboat(String Boat) {
         this.boat = Boat;
     }
        public String gethome_dest() {

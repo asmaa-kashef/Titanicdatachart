@@ -26,7 +26,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         //"C:\\Users\\asmaa\\OneDrive\\Desktop\\iti\\java\\Day5\\Day5\\Data_to_use\\titanic.csv"
-           String datapath="C:\\Users\\asmaa\\Downloads\\archive\\pyramids.csv";
+         String datapath="C:\\Users\\asmaa\\Downloads\\archive\\pyramids.csv";
          List<Column<?>>datastrucuture=new ArrayList(); 
          TitancData LD=new TitancData();
          LD.TitanicSummary(datapath);
@@ -35,11 +35,15 @@ public class Main {
            System.out.println(LD.TitanicSummary(datapath) );
       
            FromCsvtoJSON JS=new FromCsvtoJSON ();
-           List<Titanicpojo> pessangers= JS.getPassengersFromJsonFile("C:\\Users\\asmaa\\OneDrive\\Desktop\\iti\\java\\Day5\\Day5\\Data_to_use\\titanicjson.json");
-           System.out.println(pessangers);
-      
-           
-           
+           List<Titanicpojo> pessangers= JS.getPassengersFromJsonFile("C:\\Users\\asmaa\\OneDrive\\Documents\\NetBeansProjects\\java\\TitancData\\src\\main\\java\\titanic.json");
+            System.out.println(pessangers);
+             
+            
+            xchart chart=new xchart();
+            chart.graphPassengerAges(pessangers);
+            chart.graphPassengerClass(pessangers);
+             chart.graphPassengersurvivred(pessangers);
+             chart.graphPassengersurvivredgender(pessangers);
        
         
         

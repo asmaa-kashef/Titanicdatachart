@@ -38,6 +38,7 @@ public class FromCsvtoJSON  {
  
  public List<Titanicpojo> getPassengersFromJsonFile(String Filename) {
    List<Titanicpojo> allPassengers = new ArrayList<Titanicpojo> ();
+   //class in jaskson
     try{ObjectMapper objectMapper = new ObjectMapper ();
     objectMapper.configure (DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     InputStream input = new FileInputStream ( Filename);
@@ -48,8 +49,9 @@ public class FromCsvtoJSON  {
    catch(IOException ioe){
          ioe.printStackTrace();
          }
+    
             return allPassengers;
     }
  
-
+  
 }
